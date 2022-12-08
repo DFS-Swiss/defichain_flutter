@@ -7,12 +7,6 @@ import 'package:pointycastle/digests/sha256.dart';
 import 'dart:convert';
 import 'package:test/test.dart';
 
-NETWORKS.NetworkType litecoin = new NETWORKS.NetworkType(
-    messagePrefix: '\x19Litecoin Signed Message:\n',
-    bip32: new NETWORKS.Bip32Type(public: 0x019da462, private: 0x019d9cfe),
-    pubKeyHash: 0x30,
-    scriptHash: 0x32,
-    wif: 0xb0);
 // deterministic RNG for testing only
 rng(int number) {
   return utf8.encode('zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz');
@@ -58,17 +52,6 @@ main() {
           .address;
       expect(address, 'mubSzQNtZfDj1YdNP6pNDuZy6zs6GDn61L');
       expect(wif, 'cRgnQe9MUu1JznntrLaoQpB476M8PURvXVQB5R2eqms5tXnzNsrr');
-    });
-    test('can generate a Litecoin address', () {
-      final keyPair = ECPair.makeRandom(network: litecoin, rng: rng);
-      final wif = keyPair.toWIF();
-      final address = new P2PKH(
-              data: new PaymentData(pubkey: keyPair.publicKey),
-              network: litecoin)
-          .data
-          .address;
-      expect(address, 'LZJSxZbjqJ2XVEquqfqHg1RQTDdfST5PTn');
-      expect(wif, 'T7A4PUSgTDHecBxW1ZiYFrDNRih2o7M8Gf9xpoCgudPF9gDiNvuS');
     });
     test('can generate a SegWit address', () {
       final keyPair = ECPair.fromWIF(

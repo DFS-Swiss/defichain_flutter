@@ -1,6 +1,6 @@
 // TODO: Put public facing types in this file.
 import 'dart:typed_data';
-import 'package:bitcoin_flutter/src/utils/magic_hash.dart';
+import 'package:defichain_flutter/src/utils/magic_hash.dart';
 import 'package:hex/hex.dart';
 import 'package:bip32/bip32.dart' as bip32;
 import 'models/networks.dart';

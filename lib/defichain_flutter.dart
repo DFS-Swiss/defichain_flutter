@@ -1,9 +1,9 @@
 /// Support for doing something awesome.
 ///
 /// More dartdocs go here.
-library bitcoin_flutter;
+library defichain_flutter;
 
-export 'src/bitcoin_flutter_base.dart';
+export 'src/defichain_flutter_base.dart';
 export 'src/models/networks.dart';
 export 'src/transaction.dart';
 export 'src/address.dart';

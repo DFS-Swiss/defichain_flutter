@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'dart:typed_data';
-import 'package:bitcoin_flutter/src/utils/constants/op.dart';
+import 'package:defichain_flutter/src/utils/constants/op.dart';
 import 'package:meta/meta.dart';
 import 'package:hex/hex.dart';
 import 'package:bs58check/bs58check.dart' as bs58check;
@@ -107,7 +107,9 @@ class TransactionBuilder {
       if (data.length <= MAX_OP_RETURN_SIZE) {
         scriptPubKey = bscript.compile([OPS['OP_RETURN'], utf8.encode(data)]);
       } else {
-        throw new ArgumentError('Too much data embedded, max OP_RETURN size is '+MAX_OP_RETURN_SIZE.toString());
+        throw new ArgumentError(
+            'Too much data embedded, max OP_RETURN size is ' +
+                MAX_OP_RETURN_SIZE.toString());
       }
     } else if (data is Uint8List) {
       scriptPubKey = data;

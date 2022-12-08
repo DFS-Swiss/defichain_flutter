@@ -35,17 +35,17 @@ class Bip32Type {
 }
 
 final bitcoin = new NetworkType(
-    messagePrefix: '\x18Bitcoin Signed Message:\n',
-    bech32: 'bc',
+    messagePrefix: '\x15Defi Signed Message:\n',
+    bech32: 'df',
     bip32: new Bip32Type(public: 0x0488b21e, private: 0x0488ade4),
-    pubKeyHash: 0x00,
-    scriptHash: 0x05,
+    pubKeyHash: 0x12,
+    scriptHash: 0x5a,
     wif: 0x80);
 
 final testnet = new NetworkType(
-    messagePrefix: '\x18Bitcoin Signed Message:\n',
-    bech32: 'tb',
+    messagePrefix: '\x15Defi Signed Message:\n',
+    bech32: 'tf',
     bip32: new Bip32Type(public: 0x043587cf, private: 0x04358394),
-    pubKeyHash: 0x6f,
-    scriptHash: 0xc4,
+    pubKeyHash: 0xf,
+    scriptHash: 0x80,
     wif: 0xef);

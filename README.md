@@ -1,6 +1,6 @@
-<a href="https://pub.dartlang.org/packages/bitcoin_flutter"><img alt="pub version" src="https://img.shields.io/pub/v/bitcoin_flutter.svg?style=flat-square"></a>
+<a href="https://pub.dartlang.org/packages/defichain_flutter"><img alt="pub version" src="https://img.shields.io/pub/v/defichain_flutter.svg?style=flat-square"></a>
 
-# bitcoin_flutter
+# defichain_flutter
 
 A dart Bitcoin library for Flutter.
 
@@ -12,12 +12,12 @@ Otherwise, pull requests are appreciated.
 
 ## Installing
 
-[Flutter Packages](https://pub.dartlang.org/packages/bitcoin_flutter#-installing-tab-)
+[Flutter Packages](https://pub.dartlang.org/packages/defichain_flutter#-installing-tab-)
 
 ## Examples
 
 ```dart
-import 'package:bitcoin_flutter/bitcoin_flutter.dart';
+import 'package:defichain_flutter/defichain_flutter.dart';
 import 'package:bip39/bip39.dart' as bip39;
 
 main() {
