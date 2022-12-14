@@ -1,0 +1,1 @@
+const DEFI_SIGNATURE = 0x44665478;
